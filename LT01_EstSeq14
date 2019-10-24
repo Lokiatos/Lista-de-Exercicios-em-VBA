@@ -1,0 +1,15 @@
+Private Sub LT01_EstSeq14_Click()
+
+'Calcular o ângulo do triângulo'
+'Programador: Hugo Leça Ribeiro'
+
+Dim x As Integer
+Dim y As Integer
+Dim z As Integer
+
+x = InputBox("Digite o valor do primeiro ângulo")
+y = InputBox("Digite o valor do segundo ângulo")
+z = (180) - (x + y)
+MsgBox "O terceiro ângulo equivale a: " & z & "º"
+
+End Sub
