@@ -1,0 +1,17 @@
+Private Sub LT01_EstSeq07_Click()
+
+'Objetivo: Calcular o volume de um paralelepípedo'
+'Programador: Hugo Leça Ribeiro'
+
+Dim comprimento As Double
+Dim largura As Double
+Dim altura As Double
+Dim volume As Double
+
+comprimento = InputBox("Digite o comprimento do paralelepípedo")
+largura = InputBox("Digite a largura do paralelepípedo")
+altura = InputBox("Digite a altura do paralelepípedo")
+volume = (comprimento * largura * altura)
+MsgBox "o volume do paralelepípedo é de: " & volume
+
+End Sub
