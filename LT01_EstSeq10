@@ -1,0 +1,12 @@
+Private Sub LT01_EstSeq10_Click()
+
+'Objetivo: Receber 2 números reais. Calcular e mostrar a diferença desses valores.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim n1, n2, diferença As Double
+n1 = InputBox("Digitar o valor do número 1")
+n2 = InputBox("Digitar o valor do número 2")
+diferença = (n1) - (n2)
+MsgBox "A diferença entre os dois números é de: " & diferença
+
+End Sub
