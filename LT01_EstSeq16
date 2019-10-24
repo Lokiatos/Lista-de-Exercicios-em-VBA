@@ -1,0 +1,26 @@
+Private Sub LT01_EstSeq16_Click()
+'Objetivo: Receber a quantidade de horas trabalhadas, o valor por hora, o percentual de desconto e o número de descendentes.'
+'Calcular o salário que será igual às hora trabalhadas X o valor por hora.'
+'Calcular o salário líquido (Será = ao Salário Bruto - desconto).
+'A cada dependente será acrescido R$100 no Salário Líquido.
+'Exibir o salário a receber.
+'Programador: Hugo Leça Ribeiro'
+
+Dim horastrab As Double
+Dim vporhora As Double
+Dim desconto As Double
+Dim descendentes As Integer
+Dim salarioliq As Double
+Dim salariobrut As Double
+Dim salariotot As Double
+
+horastrab = InputBox("Digite aqui as horas trabalhadas")
+vporhora = InputBox("Digite aqui o valor por hora trabalhada")
+desconto = InputBox("Digite aqui o valor de percentual de desconto")
+descendentes = InputBox("Digite aqui o número de descendentes")
+salariobrut = (vporhora * horastrab)
+salarioliq = (salariobrut - (salariobrut * (1 / 100 * desconto)))
+salariotot = salarioliq + (descendentes * 100)
+MsgBox "seu salário total é de: " & salariotot
+
+End Sub
