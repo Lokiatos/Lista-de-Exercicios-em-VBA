@@ -1,0 +1,8 @@
+Private Sub LT01_EstSeq02_Click()
+'Objetivo: Receber o salário de um funcionário e mostrar o novo salário com reajuste de 15%'
+'Programador: Hugo Leça Ribeiro'
+Dim SalárioAtual, SalárioReajuste As Double
+SalárioAtual = InputBox("Digite o seu salário")
+SalárioReajuste = SalárioAtual * 1.15
+MsgBox "O seu salário com 15% de reajuste é de: " & SalárioReajuste
+End Sub
