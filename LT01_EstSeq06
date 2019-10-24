@@ -1,0 +1,16 @@
+Private Sub Lt01_EstSeq06_Click()
+
+'Objetivo: Receber x e y, efetuar a troca de seus valores e os mostrar'
+'Programador: Hugo Leça Ribeiro'
+
+Dim x As Double
+Dim y As Double
+Dim armazenador As Double
+x = InputBox("Digite o valor de x")
+y = InputBox("Digite o valor de y")
+armazenador = x
+x = y
+y = armazenador
+MsgBox "o valor atual de x é: " & x & " o valor atual de y é: " & y
+
+End Sub
