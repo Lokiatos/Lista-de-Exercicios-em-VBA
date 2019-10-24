@@ -1,0 +1,15 @@
+Private Sub LT01_EstSeq15_Click()
+
+'Receber os valores de 2 catetos de um triângulo retângulo. Calcular e mostrar a hipotenusa.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim cat1 As Double
+Dim cat2 As Double
+Dim hipot As Double
+
+cat1 = InputBox("Digite aqui o valor do primeito cateto")
+cat2 = InputBox("Digite aqui o valor do segundo cateto")
+hipot = Sqr(cat1 ^ 2 + cat2 ^ 2)
+MsgBox "O valor da hipotenusa é de: " & hipot
+
+End Sub
