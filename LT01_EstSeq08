@@ -1,0 +1,18 @@
+Private Sub LT01_EstSeq08_Click()
+
+'Objetivo: Receber o valor de um depósito em poupança. Calcular e mostrar o valor após 1 mês de aplicação
+'sabendo que rende 1,3% a.m.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim valor As Double
+Dim rendimento As Double
+Dim valorcomrendimento As Double
+Dim mes As Integer
+
+mes = 1   'Inseri esta variável para tornar mais prático futuramente, caso quiséssemos alterar a quantidade de meses'
+rendimento = 0.013 ' Inseri esta variável para caso quiséssemos alterar a porcentagem de rendimento'
+valor = InputBox("Digite aqui o valor do depósito")
+valorcomrendimento = (valor * ((rendimento * mes) + 1))
+MsgBox "A quantia total que consta em sua poupança após " & mes & " mês é de: " & valorcomrendimento
+
+End Sub
