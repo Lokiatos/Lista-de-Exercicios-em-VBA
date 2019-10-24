@@ -1,0 +1,15 @@
+Private Sub LT01_EstSeq13_Click()
+
+'Objetivo: Receber a quantidade de alimento em quilos. Calcular e mostrar quantos dias durará esse alimentos sabendo que a pessoa consome 50g ao dia.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim kg As Double
+Dim gramas As Double
+Dim duracaoemdias As Double
+
+kg = InputBox("Digite aqui quantos quilos de alimento você possui: ")
+gramas = (kg * 1000)
+duracaoemdias = (gramas / 50)
+MsgBox "Você possui alimento suficiente para: " & duracaoemdias & " dias"
+
+End Sub
