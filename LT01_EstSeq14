@@ -1,6 +1,6 @@
 Private Sub LT01_EstSeq14_Click()
 
-'Calcular o ângulo do triângulo'
+'Objetivo: Receber 2 ângulos de um triângulo. Calcular e mostrar o valor do 3º ângulo'
 'Programador: Hugo Leça Ribeiro'
 
 Dim x As Integer
