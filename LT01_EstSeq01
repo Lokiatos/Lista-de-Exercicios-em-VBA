@@ -1,0 +1,8 @@
+Private Sub LT01_EstSeq01_Click()
+'Objetivo: Calcular área do quadrado'
+'Programador: Hugo Leça Ribeiro'
+Dim lado, area As Integer
+lado = InputBox("Digite o lado do quadrado")
+area = lado * lado
+MsgBox "A área deste quadrado é de: " & area
+End Sub
