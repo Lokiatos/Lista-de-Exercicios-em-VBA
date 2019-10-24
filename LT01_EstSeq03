@@ -1,0 +1,12 @@
+Private Sub LT01_EstSeq03_Click()
+
+'Objetivo: Receber a base e a altura de um triângulo. Calcular e mostrar a sua área'
+'Programador: Hugo Leça Ribeiro'
+
+Dim base, altura, área As Double
+base = InputBox("Digite a medida da base do triângulo")
+altura = InputBox("Digite a medida da altura do triângulo")
+área = (base * altura) / 2
+MsgBox "A área deste triângulo é de: " & área
+
+End Sub
