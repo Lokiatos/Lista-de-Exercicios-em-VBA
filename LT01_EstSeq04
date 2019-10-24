@@ -1,0 +1,12 @@
+Private Sub LT01_EstSeq04_Click()
+
+'Receber a temperatura em graus Celsius e converter em fahrenheit'
+'Programador: Hugo Leça Ribeiro'
+
+Dim Celsius As Double
+Dim fahrenheit As Double
+Celsius = InputBox("Digite aqui o valor em graus Celsius")
+fahrenheit = (9 * Celsius + 160) / 5
+MsgBox "a temperatura em graus fahrenheit é de: " & fahrenheit & "ºF"
+
+End Sub
