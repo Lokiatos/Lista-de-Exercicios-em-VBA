@@ -1,0 +1,12 @@
+Private Sub LT01_EstSeq11_Click()
+
+'Objetivo: Receber o raio de uma circunferência. Calcular e mostrar o comprimento da circunferência.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim raio, comprimento, pi As Double
+pi = 3.14            'é melhor definir o pi, pois podemos acrescentar mais dígitos futuramente'
+raio = InputBox("Digite aqui a medida do raio da circunferência: ")
+comprimento = (2 * pi * raio)
+MsgBox "A medida do comprimento desta circunferência é de: " & comprimento
+
+End Sub
