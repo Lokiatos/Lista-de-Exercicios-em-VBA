@@ -1,0 +1,14 @@
+Private Sub LT01_EstSeq12_Click()
+
+'Objetivo: Receber o ano de nascimento e o ano atual. Calcular e mostrar a sua idade e quantos anos terá daqui a 17 anos.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim AnoDeNascimento, AnoAtual, idade, idadeApos17 As Integer
+AnoDeNascimento = InputBox("Digite aqui seu ano de nascimento: ")
+AnoAtual = InputBox("Digite aqui o ano atual: ")
+idade = (AnoAtual - AnoDeNascimento)
+MsgBox ("Sua idade é de: " & idade & " anos")
+idadeApos17 = (idade + 17)
+MsgBox ("Sua idade daqui a 17 anos será de: " & idadeApos17 & " anos")
+
+End Sub
