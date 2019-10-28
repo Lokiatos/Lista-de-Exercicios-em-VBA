@@ -1,0 +1,49 @@
+Private Sub LT01_EstSeq35_Click()
+'Objetivo: Receber 2 números inteiros, verificar qual é o maior entre eles. Calcular e mostrar o resultado da somatória dos números ímoares entre esses valores'
+'Programador: Hugo Leça Ribeiro
+
+Dim n1 As Integer
+Dim n2 As Integer
+Dim testeImpar As Integer
+Dim somaImpar As Integer
+
+n1 = InputBox("Digite aqui o primeiro número ")
+n2 = InputBox("Digite aqui o segundo número ")
+
+    If n1 >= n2 Then
+        testeImpar = (n2 Mod 2)
+        
+        If (testeImpar = 1) Then
+            While (n2 < (n1 - 1))
+                somaImpar = somaImpar + (n2 + 2)
+                n2 = (n2 + 2)
+            Wend
+            MsgBox ("A soma dos números ímpares inteiros entre esses dois números é de: ") & somaImpar
+        Else
+            n2 = (n2 - 1)
+            While (n2 < (n1 - 1))
+                somaImpar = somaImpar + (n2 + 2)
+                n2 = (n2 + 2)
+            Wend
+            MsgBox ("A soma dos números ímpares inteiros entre esses dois números é de: ") & somaImpar
+        End If
+    Else
+        testeImpar = (n1 Mod 2)
+        
+        If (testeImpar = 1) Then
+            While n1 < (n2 - 1)
+                somaImpar = somaImpar + (n1 + 2)
+                n1 = (n1 + 2)
+            Wend
+            MsgBox ("A soma dos números ímpares inteiros entre esses dois números é de: ") & somaImpar
+        Else
+            n1 = (n1 - 1)
+            While n1 < (n2 - 1)
+                somaImpar = somaImpar + (n1 + 2)
+                n1 = (n1 + 2)
+            Wend
+            MsgBox ("A soma dos números ímpares inteiros entre esses dois números é de: ") & somaImpar
+        End If
+    End If
+  
+End Sub
