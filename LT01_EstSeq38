@@ -1,0 +1,53 @@
+
+Private Sub LT01_EstSeq38_Click()
+'Objetivo: Receber 100 números inteiros reais. Verificar e mostrar o maior e o menor valor. Obs.: valores positivos.'
+'Programador: Hugo Leça Ribeiro
+
+Dim n1 As Integer
+Dim n2 As Integer
+Dim n As Integer
+Dim c As Integer
+
+n1 = InputBox("Digite aqui um número ")
+n2 = InputBox("Digite aqui um número ")
+c = 3
+n = 0
+
+    While c <= 100
+        n = InputBox("Digite aqui um número ")
+        If n2 > n1 Then
+            If n > n2 Then
+                n2 = n
+            Else: n2 = n2
+            End If
+            
+            If n < n1 Then
+                n1 = n
+            Else: n1 = n1
+            End If
+        Else
+            If n > n1 Then
+                n1 = n
+            Else: n1 = n1
+            End If
+            
+            If n < n2 Then
+                n2 = n
+            Else: n2 = n2
+            End If
+        End If
+        
+        c = c + 1
+    Wend
+    
+    If n2 > n1 Then
+        MsgBox ("O menor número será: ") & n1 & (" e o maior número será: ") & n2
+    Else
+        If n2 < n1 Then
+            MsgBox ("O menor número será: ") & n2 & (" e o maior número será: ") & n1
+        Else
+            MsgBox ("Todos os 100 números são iguais")
+        End If
+    End If
+        
+End Sub
