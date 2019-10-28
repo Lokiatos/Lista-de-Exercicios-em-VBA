@@ -1,0 +1,16 @@
+Private Sub LT01_EstSeq31_Click()
+'Objetivo: Calcular e mostrar o quadrado dos números entre 10 e 150'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Integer
+Dim quad As Integer
+
+n = 11
+
+    For n = 11 To 149
+        quad = (n ^ 2)
+        MsgBox ("O quadrado de: ") & n & (" é ") & quad
+        
+    Next
+          
+End Sub
