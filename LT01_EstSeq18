@@ -1,0 +1,22 @@
+Private Sub LT01_EstSeq18_Click()
+'Objetivo: Receber 2 valores inteiros. Calcular e mostrar o resultado da diferença do maior pelo menor valor.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim n1 As Integer
+Dim n2 As Integer
+Dim resultado As Integer
+n1 = InputBox("Digite aqui o valor do Número 1")
+n2 = InputBox("Digite aqui o valor do Número 2")
+    If (n1 > n2) Then
+        resultado = (n1 - n2)
+        MsgBox "A diferença entre o número maior e o menor é de: " & resultado
+    Else
+        If (n1 < n2) Then
+            resultado = (n2 - n1)
+            MsgBox "A diferença entre o número maior e o menor é de: " & resultado
+        Else
+            MsgBox "Os números são iguais, então a diferença será de 0"
+        End If
+    End If
+    
+End Sub
