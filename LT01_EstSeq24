@@ -1,0 +1,27 @@
+Private Sub LT01_EstSeq24_Click()
+'Objetivo: Receber um valor inteiro. Verificar e mostrar se é divisível por 2 e 3'
+'Programador: Hugo Leça Ribeiro'
+
+Dim x As Integer
+Dim TestePor2 As Double
+Dim TestePor3 As Double
+
+x = InputBox("Digite aqui um número para verificar se é divisível por 2 e 3")
+TestePor2 = x Mod 2
+TestePor3 = x Mod 3
+
+    If (TestePor2 = 0 And TestePor3 = 0) Then
+        MsgBox ("Este número é divisível por 2 e 3")
+    Else
+        If (TestePor2 = 0) Then
+            MsgBox ("Este número é divisível por 2")
+        Else
+            If (TestePor3 = 0) Then
+                MsgBox ("Este número é divisível por 3")
+            Else
+                MsgBox ("Este número não é divisível por 2 nem por 3")
+            End If
+        End If
+    End If
+         
+End Sub
