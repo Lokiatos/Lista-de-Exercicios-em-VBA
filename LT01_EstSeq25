@@ -1,0 +1,47 @@
+'Objetivo: Calcular duração de um jogo (em horas e minutos), sendo que a duração não ultrapassará 24 horas'
+'Programador: Hugo Leça Ribeiro'
+
+Dim HoraInicial As Integer
+Dim MinInicial As Integer
+Dim HoraFinal As Integer
+Dim MinFinal As Integer
+Dim DuracaoH As Integer
+Dim DuracaoMin As Integer
+
+HoraInicial = InputBox("Digite aqui a hora incial do jogo")
+MinInicial = InputBox("Digite aqui o minuto inicial do jogo")
+HoraFinal = InputBox("Digite aqui a hora que terminou o jogo")
+MinFinal = InputBox("Digite aqui o minuto que terminou o jogo")
+
+    If MinFinal >= MinInicial Then
+        DuracaoMin = (MinFinal - MinInicial)
+    Else
+        DuracaoMin = (MinFinal + 60) - MinInicial
+    End If
+        
+    If (HoraFinal > HoraInicial) And (MinFinal >= MinInicial) Then
+        DuracaoH = HoraFinal - HoraInicial
+    Else
+        If (HoraFinal > HoraInicial) And (MinFinal < MinInicial) Then
+            DuracaoH = ((HoraFinal - HoraInicial) - 1)
+        Else
+        
+            If (HoraFinal < HoraInicial) And (MinFinal >= MinInicial) Then
+                DuracaoH = (HoraFinal + 24) - HoraInicial
+            Else
+                If (HoraFinal < HoraInicial) And (MinFinal < MinInicial) Then
+                    DuracaoH = (HoraFinal + 23) - HoraInicial
+                Else
+                    If (HoraFinal = HoraInicial) And (MinFinal >= MinInicial) Then
+                    DuracaoH = 0
+                    Else
+                        DuracaoH = 23
+                    End If
+                End If
+            End If
+        End If
+    End If
+        
+    MsgBox ("A Duração total do jogo foi de: ") & DuracaoH & ("horas  ") & DuracaoMin & ("   minutos")
+        
+End Sub
