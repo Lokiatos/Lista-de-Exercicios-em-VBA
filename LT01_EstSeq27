@@ -1,0 +1,16 @@
+Private Sub LT01_EstSeq27_Click()
+'Objetivo: Receber o número de voltas, a extensão do circuito (em metros) e o tempo de duração (em minutos). Calcular e mostrar a velocidade média em km/h.'
+'Programador: Hugo Leça Ribeiro'
+
+Dim voltas As Double
+Dim comprimentoDoCircuito As Double
+Dim tempo As Double
+Dim VM As Double
+
+voltas = InputBox("Digite quantas voltas possui este circuito")
+comprimentoDoCircuito = InputBox("Digite qual é o comprimento do circuito em metros")
+tempo = InputBox("Digite o tempo gasto para percorrer tal circuito - em minutos")
+VM = ((voltas * (comprimentoDoCircuito / 1000)) / (tempo / 60))
+MsgBox ("A velocidade média foi de: ") & VM & ("KM/H")
+
+End Sub
