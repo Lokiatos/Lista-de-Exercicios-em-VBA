@@ -1,0 +1,35 @@
+Private Sub LT01_EstSeq37_Click()
+'Objetivo: Receber um número inteiro. calcular e mostrar a série de Fibonacci até o seu N'nésimo termo'
+'Programador: Hugo Leça Ribeiro
+
+Dim nAtual As Double
+Dim TFinal As Integer
+Dim tAtual As Integer
+Dim nant As Double
+Dim nAnt2 As Double
+
+TFinal = InputBox("Digite aqui o termo final da sequência ")
+nant = 1
+nAnt2 = 0
+
+    If TFinal <= 0 Then
+        MsgBox ("Termo inválido")
+    Else
+        If TFinal = 1 Then
+            MsgBox ("O valor do termo de nº 1 é: ") & nAnt2
+        Else
+            MsgBox ("O valor do termo de nº 1 é: ") & nAnt2
+            MsgBox ("O valor do termo de nº 2 é: ") & nant
+            If TFinal > 2 Then
+                tAtual = 3
+                While tAtual <= TFinal
+                    nAtual = (nant + nAnt2)
+                    MsgBox ("O valor do termo de nº ") & tAtual & (" é: ") & nAtual
+                    nAnt2 = nant
+                    nant = nAtual
+                    tAtual = tAtual + 1
+                Wend
+            End If
+        End If
+    End If
+End Sub
