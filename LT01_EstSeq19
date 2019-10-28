@@ -1,0 +1,22 @@
+Private Sub LT01_EstSeq19_Click()
+'Objetivo: Receber 2 valores reais. Mostrar o maior deles'
+'Programador: Hugo Leça Ribeiro'
+
+Dim n1 As Double
+Dim n2 As Double
+
+n1 = InputBox("Digite aqui o Número 1")
+n2 = InputBox("Digite aqui o Número 2")
+
+    If (n1 > n2) Then
+        MsgBox "n1: " & n1
+    Else
+        If (n1 = n2) Then
+            MsgBox "Ambos os números são iguais"
+        Else
+            MsgBox "n2: " & n2
+        End If
+        
+    End If
+    
+End Sub
