@@ -1,0 +1,34 @@
+Private Sub LT01_EstSeq29_Click()
+'Receber o tipo de investimento (1 = poupança e 2 = renda fixa) e o valor do investimento. Calcular e mostrar o valor corrigido em 30 dias sabendo que a poupança rende 3% e a renda fixa rende 5%.
+'Demais tipos não serão considerados.
+'Programador: Hugo Leça Ribeiro
+
+Dim Dias As Double
+Dim Poupanca As Double
+Dim RendaFixa As Double
+Dim valor As Double
+Dim ValorCorrigido As Double
+Dim mes As Double
+Dim Escolha As Integer
+
+Dias = 30
+Poupanca = 0.03
+RendaFixa = 0.05
+mes = (Dias / 30)
+
+valor = InputBox("Digite aqui o valor do investimento")
+Escolha = InputBox("Digite 1 para 'Poupança' ou 2 para 'Renda Fixa'")
+
+    If (Escolha = 1) Then
+        ValorCorrigido = valor + (mes * Poupanca * valor)
+        MsgBox ("O valor corrigido é de: ") & ValorCorrigido
+    Else
+        If (Escolha = 2) Then
+            ValorCorrigido = valor + (mes * RendaFixa * valor)
+            MsgBox ("O valor corrigido é de: ") & ValorCorrigido
+        Else
+            MsgBox ("Número Inválido, digite 1 ou 2")
+        End If
+    End If
+
+End Sub
