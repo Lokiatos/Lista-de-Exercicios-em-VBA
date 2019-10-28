@@ -1,0 +1,45 @@
+Private Sub LT01_EstSeq40_Click()
+'Objetivo: Receber 2 números inteiros. Verificar e mostrar todos os números primos existentes entre eles.'
+'Programador: Hugo Leça Ribeiro
+
+Dim n1 As Integer
+Dim n2 As Integer
+Dim c As Integer
+Dim raiz As Integer
+Dim i As Integer
+Dim f As Integer
+Dim aux As Integer
+
+
+n1 = InputBox("Digite aqui o primeiro número")
+n2 = InputBox("Digite aqui o segundo número")
+
+    If n2 < n1 Then 'Apenas para inverter os valores, caso o primeiro valor seja maior do que o segundo
+        aux = n1
+        n1 = n2
+        n2 = aux
+    End If
+
+    If n1 <= 0 Then
+        c = 2   'O menor número primo é o 2'
+    Else: c = (n1 + 1)
+    End If
+    
+    While c < n2
+        f = 0
+        raiz = Sqr(c) 'O melhor jeito de verificar se um número é primo é dividindo ele pela sua raiz inteira até o número 2
+        i = raiz
+        While i > 1
+            If c Mod i = 0 Then
+                f = (f + 1)
+            End If
+            i = (i - 1)
+        Wend
+        
+        If f = 0 Then
+            MsgBox (c)
+        End If
+        c = c + 1
+    Wend
+     
+End Sub
