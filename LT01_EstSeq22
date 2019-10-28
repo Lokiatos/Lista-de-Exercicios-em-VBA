@@ -1,0 +1,23 @@
+Private Sub LT01_estSeq22_Click()
+'Objetivo: Receber 2 valores inteiros e diferentes. Mostrar seus valores em ordem crescente'
+'Programador: Hugo Leça Ribeiro'
+
+Dim n1 As Integer
+Dim n2 As Integer
+
+n1 = InputBox("Digite aqui o primeiro número")
+n2 = InputBox("Digite aqui o segundo número")
+
+    If (n1 = n2) Then
+    MsgBox ("Estes números são iguais")
+    
+    Else
+        If (n1 < n2) Then
+            MsgBox n1
+            MsgBox n2
+        Else
+            MsgBox n2
+            MsgBox n1
+        End If
+    End If
+End Sub
