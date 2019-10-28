@@ -1,0 +1,31 @@
+Private Sub LT01_EstSeq39_Click()
+''Objetivo: Calcule a quantidade de grãos contidos em um tabuleiro de xadrez onde:'
+'Casa: 1 2 3 4 ... 64'
+'Qdtd: 1 2 4 8 ... N'
+'Programador: Hugo Leça Ribeiro
+
+Dim c As Integer
+Dim casa As Integer
+Dim GraosT As Double
+Dim GraosCasaAnt As Double
+Dim graosCasaAtual As Double
+
+graosCasaAtual = 1
+GraosCasaAnt = 1
+GraosT = 1
+casa = InputBox("Digite aqui a casa que quer saber a quantidade de grãos nela e a quantidade de grãos em todo o tabuleiro - máximo de casas: 64 ")
+c = 1
+
+    If casa > 64 Or casa <= 0 Then
+        MsgBox ("O número de casas no tabuleiro de xadrez é de 1 a 64 ")
+    Else
+        While c < casa
+            graosCasaAtual = (2 * GraosCasaAnt)
+            GraosT = GraosT + graosCasaAtual
+            GraosCasaAnt = graosCasaAtual
+            c = (c + 1)
+        Wend
+        MsgBox ("O número de grãos na casa atual é de: ") & graosCasaAtual
+        MsgBox ("O número total de grãos no tabuleiro é de: ") & GraosT
+    End If
+End Sub
