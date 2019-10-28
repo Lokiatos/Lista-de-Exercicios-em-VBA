@@ -1,0 +1,15 @@
+Private Sub LT01_EstSeq34_FOR_Click()
+'Objetivo: Receber um número e mostrar a tabuada desde número do 0 ao 10'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Double
+Dim c As Double
+Dim result As Double
+
+n = InputBox("Digite aqui o número para sabermos sua tabuada")
+
+    For c = 0 To 10
+        result = (n * c)
+        MsgBox (" " & n & " x " & c & " será igual a " & result)
+    Next
+End Sub
