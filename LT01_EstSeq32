@@ -1,0 +1,21 @@
+Private Sub LT01_EstSeq32_Click()
+'Objetivo: Receber um número inteiro. Calcular e mostrar o seu fatorial'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Long
+Dim fat As Double
+
+fat = 1
+n = InputBox("Digite aqui o número para sabermos sua fatorial")
+
+    If (n >= 0) Then
+        While n > 0
+            fat = (fat * n)
+            n = (n - 1)
+        Wend
+        MsgBox ("O fatorial será de: ") & fat
+    Else
+        MsgBox ("O fatorial será de 0")
+    End If
+    
+End Sub
