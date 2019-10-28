@@ -1,0 +1,26 @@
+Private Sub Lt01_EstSeq21_Click()
+'Objetivo: Receber 4 notas Bimestrais. Calcular e mostrar a média e mensagem de acordo com a média'
+'Programador: Hugo Leça Ribeiro'
+
+Dim nota1 As Double
+Dim nota2 As Double
+Dim nota3 As Double
+Dim nota4 As Double
+
+nota1 = InputBox("Digite aqui a nota do 1º bimestre")
+nota2 = InputBox("Digite aqui a nota do 2º bimestre")
+nota3 = InputBox("Digite aqui a nota do 3º bimestre")
+nota4 = InputBox("Digite aqui a nota do 4º bimestre")
+media = ((nota1 + nota2 + nota3 + nota4) / 4)
+
+    If (media >= 6) Then
+    MsgBox "Aprovado"
+    Else
+        If (media >= 3) Then
+            MsgBox "Exame"
+        Else
+            MsgBox "Retido"
+        End If
+    End If
+    
+End Sub
