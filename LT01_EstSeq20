@@ -1,0 +1,29 @@
+Private Sub LT01_EstSeq20_Click()
+'Objetivo: Verificar e mostrar a existência de raízes reais numa equação de 2º grau'
+'Programador: Hugo Leça Ribeiro'
+
+Dim A As Double
+Dim B As Double
+Dim c As Double
+Dim delta As Double
+Dim x1 As Double
+Dim x2 As Double
+
+A = InputBox("digite aqui o valor de A")
+B = InputBox("digite aqui o valor de B")
+c = InputBox("digite aqui o valor de C")
+
+delta = (B ^ 2) - (4 * A * c)
+        If (delta >= 0) Then
+            x1 = ((-B + Sqr(delta)) / (2 * A))
+            x2 = ((-B - Sqr(delta)) / (2 * A))
+            If (delta > 0) Then
+                MsgBox ("A primeira raiz é: " & x1)
+                MsgBox ("A segunda raiz é: " & x2)
+            Else
+                MsgBox ("Só existe uma raiz, que é: " & x1)
+            End If
+        Else
+            MsgBox ("Não há raízes reais")
+        End If
+End Sub
