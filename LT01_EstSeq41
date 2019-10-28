@@ -1,0 +1,25 @@
+Private Sub LT01_EstSeq41_Click()
+'Objetivo: Mosrar todas as possibilidades de 2 dados de forma que a soma tenha como resultado 7'
+'Programador: Hugo Leça Ribeiro
+
+Dim d As Integer
+Dim d2 As Integer
+Dim soma As Integer
+
+d = 1
+d2 = 1
+soma = 0
+
+    While d <= 6
+        While d2 <= 6
+            soma = (d + d2)
+            If soma = 7 Then
+                MsgBox (d) & (" e ") & (d2)
+            End If
+            d2 = d2 + 1
+        Wend
+        d2 = 1
+        d = d + 1
+    Wend
+          
+End Sub
