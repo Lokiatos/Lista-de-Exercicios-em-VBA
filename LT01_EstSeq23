@@ -1,0 +1,42 @@
+Private Sub LT01_EstSeq23_Click()
+'Objetivo: Receber 3 valores em ordem crescente e um 4º valor. Mostrar os 4 números em ordem crescente'
+'Programador: Hugo Leça Ribeiro'
+
+Dim n1 As Double
+Dim n2 As Double
+Dim n3 As Double
+Dim n4 As Double
+
+MsgBox ("Atenção! Os três primeiros números deverão ser digitados em ordem crescente")
+
+n1 = InputBox("Digite aqui o Número 1")
+n2 = InputBox("Digite aqui o Número 2")
+n3 = InputBox("Digite aqui o Número 3")
+n4 = InputBox("Digite aqui o Número 4")
+
+    If (n4 > n3) Then
+        MsgBox n1
+        MsgBox n2
+        MsgBox n3
+        MsgBox n4
+    Else
+        If (n4 > n2) Then
+            MsgBox n1
+            MsgBox n2
+            MsgBox n4
+            MsgBox n3
+        Else
+            If (n4 > n1) Then
+                MsgBox n1
+                MsgBox n4
+                MsgBox n2
+                MsgBox n3
+            Else
+                MsgBox n4
+                MsgBox n1
+                MsgBox n2
+                MsgBox n3
+            End If
+        End If
+    End If
+End Sub
