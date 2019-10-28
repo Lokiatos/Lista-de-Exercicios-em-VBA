@@ -1,0 +1,17 @@
+Private Sub LT01_EstSeq34_Click()
+'Objetivo: Receber um número. Calcular e mostrar os resultados da tabuada (0 a 10) desse número'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Double
+Dim mult As Integer
+Dim result As Double
+
+mult = 10
+n = InputBox("Digite aqui o número desejado")
+
+    While mult >= 0
+        result = (n * mult)
+        MsgBox ("Este número multiplicado por ") & mult & (" resulta em ") & result
+        mult = (mult - 1)
+    Wend
+End Sub
