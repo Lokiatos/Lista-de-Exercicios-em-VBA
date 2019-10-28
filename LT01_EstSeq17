@@ -1,0 +1,14 @@
+Private Sub LT01_EstSeq17_Click()
+'Calcular a quantidade de litros gastos em uma viagem, sabendo que o automóvel faz 12 km/l. Receber o tempo de percurso e a velocidade média'
+'Programador: Hugo Leça Ribeiro'
+
+Dim litros As Double
+Dim tempo As Double
+Dim VM As Double
+
+tempo = InputBox("Digite aqui o tempo (em horas) gasto no percurso")
+VM = InputBox("Digite aqui a velocidade média do automóvel")
+litros = ((tempo * VM) / 12)
+MsgBox "A quantidade de litros gastos é de: " & litros
+
+End Sub
