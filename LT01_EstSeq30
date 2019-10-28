@@ -1,0 +1,153 @@
+Private Sub LT01_EstSeq30_Click()
+'Objetivo: Receber a data de nascimento e atual em ano, mês e dia. Calcular e mostar a idade em anos, meses e dias, considerando os anos bissextos.'
+'Programador: Hugo Leça Ribeiro
+
+Dim Ai As Integer
+Dim Mi As Integer
+Dim Di As Integer
+Dim Af As Integer
+Dim Mf As Integer
+Dim Df As Integer
+Dim At As Integer
+Dim Mt As Integer
+Dim Dt As Integer
+Dim bis As Integer
+Dim DdoMes As Integer
+
+Di = InputBox("Digite aqui o dia de nascimento")
+Mi = InputBox("Digite aqui o mês de nascimento")
+Ai = InputBox("Digite aqui o Ano de Nascimento")
+
+Df = InputBox("Digite aqui o dia atual")
+Mf = InputBox("Digite aqui o mês atual")
+Af = InputBox("Digite aqui o ano atual")
+
+'DdoMes'
+If Mf = 1 Or Mf = 3 Or Mf = 5 Or Mf = 7 Or Mf = 8 Or Mf = 10 Or Mf = 12 Then
+    DdoMes = 31
+Else
+    If Mf = 2 Then 'fevereiro'
+        If Af Mod 4 = 0 Then
+            DdoMes = 29
+        Else
+            DdoMes = 28
+        End If
+    Else
+        DdoMes = 30
+    End If
+End If
+'DdoMes'
+
+If Af = Ai Then 'anos iguais'
+    If Mi = Mf Then 'anos iguais e meses iguais'
+        Dt = Df - Di
+        At = 0
+        Mt = 0
+    Else
+        If Df = Di Then 'anos iguais, meses diferentes, dias iguais'
+            Mt = Mf - Mi
+            At = 0
+            Dt = 0
+        Else
+            If Df > Di Then 'anos iguais, meses diferentes, dia atual maior que dia inicial'
+                Mt = Mf - Mi
+                Dt = Df - Di
+                At = 0
+            Else 'anos iguais, meses diferentes, dia atual menor que o dia de nascimento'
+                If Mf = 1 Or Mf = 3 Or Mf = 5 Or Mf = 7 Or Mf = 8 Or Mf = 10 Or Mf = 12 Then 'meses com 31 dias'
+                    Dt = (Df + 31) - Di
+                    Mt = (Mf - Mi) - 1
+                    At = 0
+                Else
+                    If Mf = 2 Then 'fevereiro'
+                        If Af Mod 4 = 0 Then
+                            Dt = (Df + 29) - Di
+                            Mt = (Mf - Mi) - 1
+                            At = 0
+                        Else
+                            Dt = (Df + 28) - Di
+                            Mt = (Mf - Mi) - 1
+                            At = 0
+                        End If
+                    Else  ' meses com 30 dias'
+                        Dt = (Df + 30) - Di
+                        Mt = (Mf - Mi) - 1
+                        At = 0
+                    End If
+                End If
+            End If
+        End If
+    End If
+Else 'ANO MAIOR'
+    If Mi = Mf Then 'Ano maior, meses iguais'
+        If Df >= Di Then 'Ano maior, meses iguais, Dia atual maior ou giual ao dia Inicial'
+            At = Af - Ai
+            Mt = 0
+            Dt = Df - Di
+        Else
+            At = (Af - Ai) - 1
+            Mt = (Mf - Mi)
+            Dt = (Df + DdoMes) - Di
+        End If
+    Else
+        If Mi <= Mf Then 'Ano maior, Mês de nascimento é menor  ou igual que o mês atual'
+            If Df >= Di Then
+                At = Af - Ai
+                Mt = Mf - Mi
+                Dt = Df - Di
+            Else
+                At = Af - Ai
+                Mt = Mf - Mi - 1
+                Dt = (Df + DdoMes) - Di
+            End If
+        Else
+            If Df >= Di Then
+                At = Af - Ai - 1
+                Mt = Mf + 12 - Mi
+                Dt = Df - Di
+            Else
+                If Mi < Mf Then
+                    At = Af - Ai - 1
+                    Mt = Mf + 12 - Mi - 1
+                    Dt = (Df + DdoMes - Di)
+                Else
+                    Mt = 0
+                    At = Af - Ai - 1
+                    Dt = (Df + DdoMes - Di)
+                End If
+            End If
+        End If
+    End If
+End If
+
+
+If Af Mod 4 = 0 Then
+    While Ai < Af
+        If Ai Mod 4 = 0 Then
+            bis = bis + 1
+        End If
+        Ai = Ai + 1
+    Wend
+Else
+    While Ai <= Af
+        If Ai Mod 4 = 0 Then
+            bis = bis + 1
+        End If
+        Ai = Ai + 1
+    Wend
+End If
+
+Dt = Dt + bis
+
+If Dt > 30 Then
+    Mt = Mt + Dt / 30
+    Dt = Dt Mod 30
+    If Mt > 12 Then
+        At = At + Mt / 12
+        Mt = Mt Mod 12
+    End If
+End If
+
+MsgBox (At & " anos " & Mt & " meses " & Dt & " dias")
+
+End Sub
