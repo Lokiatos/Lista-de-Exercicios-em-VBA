@@ -1,0 +1,28 @@
+Private Sub LT01_EstSeq36_Click()
+'Objetivo: Receber um número N. Calcular e mostrar a série 1 + 1/1! + 1/2! + ... + 1/N!'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Double
+Dim nfat As Double
+Dim seq As Double
+Dim fat As Double
+
+n = InputBox("Digite aqui o número desejado ")
+seq = 1
+fat = 1
+nfat = n
+
+    While n >= 1
+        While nfat >= 1
+            fat = (fat * nfat)
+            nfat = (nfat - 1)
+        Wend
+        seq = seq + (1 / fat)
+        n = n - 1
+        nfat = n
+        fat = 1
+    Wend
+    
+    MsgBox ("O valor desta sequência é de: ") & seq
+    
+End Sub
