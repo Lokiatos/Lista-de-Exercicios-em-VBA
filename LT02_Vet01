@@ -1,0 +1,29 @@
+Private Sub LT01_Vet01_Click()
+'Objetivo: Criar e coletar um vetor [50] inteiro. Calcular e exibir:
+'a. A média dos valores entre 10 e 200;
+'b. A soma dos números ímpares
+
+Dim somaim As Integer
+Dim vt(50) As Integer
+Dim i As Integer
+Dim cmedia As Integer
+Dim media As Double
+
+For i = 1 To 50
+    vt(i) = InputBox("Digite aqui um número ")
+    
+    If vt(i) > 10 And vt(i) < 200 Then  'Caso o número esteja entre 10 e 200 vamos inserir na média
+        media = media + vt(i)
+        cmedia = cmedia + 1
+    End If
+    If vt(i) Mod 2 = 1 Then 'Caso o número seja ímpar vamos inserir na soma dos ímpares
+        somaim = somaim + vt(i)
+    End If
+Next
+
+media = media / cmedia
+
+MsgBox ("A média será de: " & media)
+MsgBox ("A soma dos ímpares será de: " & somaim)
+
+End Sub
