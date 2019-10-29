@@ -1,0 +1,42 @@
+Private Sub Repeticao_37_Click()
+'Uma academia deseja fazer um senso entre seus clientes para descobrir o mais alto, o mais baixo, a mais gordo e o mais magro,
+'para isto você deve fazer um programa que pergunte a cada um dos clientes da academia seu código, sua altura e seu peso.
+'O final da digitação de dados deve ser dada quando o usuário digitar 0 (zero) no campo código.
+'Ao encerrar o programa também deve ser informados os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro, além da média das alturas e dos pesos dos clientes
+'Programador: Hugo Leça Ribeiro
+
+Dim codigo As Double
+Dim mAlto As Variant
+Dim mBaixo As Variant
+Dim mGordo As Variant
+Dim mMagro As Variant
+Dim alt As Double
+Dim peso As Double
+
+codigo = 1
+
+While codigo <> 0
+    codigo = InputBox("Digite aqui o código de cadastro")
+    If codigo = 0 Then GoTo fim
+    alt = InputBox("Digite a altura deste cliente")
+    peso = InputBox("Digite o peso deste cliente")
+    If alt > mAlto Then
+        mAlto = ("codigo: " & codigo & "  altura: " & alt)
+    End If
+    If alt < mBaixo Or mBaixo = 0 Then
+        mBaixo = ("codigo: " & codigo & "  altura: " & alt)
+    End If
+    If peso > mGordo Then
+        mGordo = ("codigo: " & codigo & "   peso: " & peso)
+    End If
+    If peso < mMagro Or mMagro = 0 Then
+        mMagro = ("codigo: " & codigo & "   peso: " & peso)
+    End If
+Wend
+fim:
+msgbox ("O mais alto é: " & mAlto)
+msgbox ("O mais baixo é: " & mBaixo)
+msgbox ("O mais pesado é: " & mGordo)
+msgbox ("O mais leve é: " & mMagro)
+
+End Sub
