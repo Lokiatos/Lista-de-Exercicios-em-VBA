@@ -1,0 +1,20 @@
+Private Sub Repeticao_07_Click()
+'Faça um programa que leia 5 números e informe o maior número.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Double
+Dim maior As Double
+Dim c As Integer
+c = 1
+
+While c <= 5
+    N = InputBox("Digite aqui um número")
+    If N > maior Then
+        maior = N
+    End If
+    c = c + 1
+Wend
+
+msgbox ("O maior número é o : " & maior)
+
+End Sub
