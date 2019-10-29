@@ -1,0 +1,47 @@
+Private Sub Repeticao_19_Click()
+'Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+Dim menor As Integer
+Dim maior As Integer
+Dim Soma As Integer
+Dim c As Integer
+
+c = InputBox("Informe aqui quantos números você digitará")
+If c <= 0 Then
+    msgbox ("A quantidade de números no conjunto deve ser maior do que 0")
+End If
+
+Repetir:
+N = InputBox("Digite aqui um número")
+If N <= 0 Or N >= 1000 Then
+    msgbox ("Número inválido, digite outro número")
+    GoTo Repetir
+Else:
+    maior = N
+    menor = N
+    Soma = N
+End If
+
+While c > 1
+    N = InputBox("Digite aqui um número")
+    If N > 0 And N < 1000 Then
+        Soma = Soma + N
+        If N < menor Then
+            menor = N
+        End If
+        If N > maior Then
+            maior = N
+        End If
+    c = c - 1
+    Else:
+        msgbox ("Número inválido, digite outro número")
+    End If
+Wend
+
+msgbox ("O maior número digitado é o: " & maior)
+msgbox ("O menor número digitado é o: " & menor)
+msgbox ("A soma dos números digitados é: " & Soma)
+
+End Sub
