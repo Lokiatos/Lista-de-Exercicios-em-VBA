@@ -1,0 +1,36 @@
+Private Sub LT02_VET04_Click()
+'Objetivo: Criar e coletar um vetor [30] real e calcular e exibir:
+' A média do grupo;
+'A quantidade de notas acima da média
+'As posições dos valores abaixo da média do grupo
+'Programador: Hugo Leça Ribeiro
+
+Dim vt(10) As Double
+Dim media As Double
+Dim cmedia As Double
+Dim nacima As Integer
+Dim abaixo As String
+
+Dim i As Integer
+
+For i = 1 To 30
+    vt(i) = InputBox("Digite aqui uma nota ")
+    media = media + vt(i)
+    cmedia = cmedia + 1
+Next
+media = media / cmedia
+
+For i = 1 To 30
+    If vt(i) > media Then
+        nacima = nacima + 1
+    End If
+    If vt(i) < media Then
+        abaixo = abaixo & i & " ; "
+    End If
+Next
+
+MsgBox ("A média do grupo é de: " & media)
+MsgBox (nacima & " notas estiveram acima da média")
+MsgBox ("As posições que estiveram abaixo da média foram: " & abaixo)
+
+End Sub
