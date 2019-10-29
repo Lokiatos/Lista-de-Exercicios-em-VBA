@@ -1,0 +1,75 @@
+Private Sub LT02_Vet07_Click()
+'A partir do exercício 6 (vetor classificado) solicitar um vetor qualquer e verificar a sua existência no vetor (utilizar pesquisa binária)
+' SEM GOTO Criar e voletar em um vetor [20] com números aleatórios. Classificar este vetor em ordem crescente e mostre os dados.'
+'Programador: Hugo Leça Ribeiro
+
+Dim vet(20) As Double 'Vetor principal'
+Dim aux As Double 'Auxiliar para trocar valores de índices'
+Dim i As Double 'Contador'
+Dim j As Double
+Dim msg As String 'mensagem que aparecerá os números em ordem crescente'
+i = 1
+While i <= 20
+    vet(i) = InputBox("Digite aqui um número") ' receber 20 números no vetor'
+    i = i + 1
+Wend
+
+i = 1 'Voltar o contador para 1'
+
+While i <= 19 'Laço indo do primeiro índice até o penúltimo índice, já que o último índice será o maior, não haverá mais como comparar o último com algum outro'
+    j = (i + 1) 'O contador j irá sempre iniciar como sendo o índice do contador i + 1'
+
+    While j <= 20 'Laço indo do j (i + 1) até o último índice (20)'
+        If vet(i) > vet(j) Then 'Caso o número do índice i seja maior do que o número do índice j, então devemos trocá-los de posição'
+            aux = vet(i)
+            vet(i) = vet(j)
+            vet(j) = aux 'Auxiliar ajudando na troca de valores dos índices i e j'
+        End If
+        j = j + 1 'Precisamos igualar novamente o j para ser (i + 1)'
+    Wend
+    If j = 21 Then 'Isso quer dizer que já conferimos até o último índice do vetor, então precisamos aumentar em 1 o índice i'
+        i = i + 1 'Aumentando em 1 o índice i'
+    End If
+Wend
+
+For i = 1 To 20
+    msg = msg & " " & vet(i)
+Next
+
+MsgBox ("A ordem crescente dos números nesse vetor será: " & msg)
+
+Repetir:
+
+n = InputBox("Digite aqui um número que queira localizar dentro do vetor")
+min = 1
+max = 20
+tentativas = 0
+
+While min <> max
+    tentativas = tentativas + 1
+    med = (max + min) \ 2
+    If n = vet(med) Then
+        MsgBox ("O número " & n & " está localizado no índice " & med & " deste vetor" & " O número de tentativas foi: " & tentativas)
+        GoTo Final
+    Else
+        If n > vet(med) Then
+            min = med + 1
+        Else
+            max = med - 1
+        End If
+    End If
+Wend
+
+tentativas = tentativas + 1
+If n = vet(max) Then
+    MsgBox ("O número " & n & " está localizado no índice " & max & " deste vetor" & Chr(13) & Chr(10) & "O número de tentativas foi: " & tentativas)
+Else
+    MsgBox ("Número não encontrado neste vetor" & Chr(13) & Chr(10) & "O número de tentativas foi: " & tentativas)
+End If
+
+Final:
+
+n = InputBox("Caso queira repetir a busca, digite 1; caso queira encerrar o programa digite 2")
+If n = 1 Then GoTo Repetir
+
+End Sub
