@@ -1,0 +1,26 @@
+Private Sub LT02_Vet03_Click()
+'Objetivo: Criar e coletar valores inteiros nos vetores VT1[3] e VT2[3]. Concatenar esses valores em um 3º vetor (VT3[6]) e mostrar os seus dados. P.ex:
+'VT1: 1 2 3
+'VT2: 4 5 6
+'VT3: 1 2 3 4 5 6
+
+Dim VT1(3) As Integer
+Dim VT2(3) As Integer
+Dim VT3(6) As Integer
+Dim i As Integer
+
+For i = 1 To 3
+    VT1(i) = InputBox("Digite aqui um número para o vetor 1 ")
+    VT2(i) = InputBox("Digite aqui um número para o vetor 2 ")
+Next
+
+VT3(1) = VT1(1)
+VT3(2) = VT1(2)
+VT3(3) = VT1(3)
+VT3(4) = VT2(1)
+VT3(5) = VT2(2)
+VT3(6) = VT2(3)
+
+MsgBox (VT3(1) & VT3(2) & VT3(3) & VT3(4) & VT3(5) & VT3(6))
+
+End Sub
