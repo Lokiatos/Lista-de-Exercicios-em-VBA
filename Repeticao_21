@@ -1,0 +1,30 @@
+Private Sub Repeticao_21_Click()
+'Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+Dim c As Integer
+
+N = InputBox("Digite aqui um número apra sabermos se ele é primo")
+
+If N <= 1 Then
+    msgbox ("Os primos se iniciam a partir do número 1")     'Os primos se iniciam no número 2 em diante'
+    GoTo Break
+End If
+
+If N Mod 2 = 0 And N > 2 Then
+    msgbox ("Esse número não é primo")   'Checará se um número é par e maior do que 2. Caso seja, ele não é primo'
+Else
+    c = Sqr(N)              'O jeito mais rápido de teste se um número é primo é obter sua raiz e assim dividí-lo pela raiz e por todos os números abaixo da raiz e maiores do que 1'
+    While c > 1             'O laço não chega a dividir o número por 1, já que todos os números são divisíveis por 1'
+        If N Mod c = 0 Then
+            msgbox ("Esse número não é primo")
+            GoTo Break      'Assim encurtamos o código, logo que descobrirmos o primeiro divisor, o código já irá para o final'
+        Else
+            c = c - 1
+        End If
+    Wend
+    msgbox ("Esse número é primo")
+End If
+Break:
+End Sub
