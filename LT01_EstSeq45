@@ -1,0 +1,23 @@
+Private Sub LT01_EstSeq45_Click()
+'Objetivo: Calcule e mostre a série 1 – 2/4 + 3/9 – 4/16 + 5/25 + ... + 15/225'
+'Programador: Hugo Leça Ribeiro
+
+Dim n As Integer
+Dim den As Integer
+Dim result As Double
+
+result = 1
+n = -2
+
+    While Abs(n) <= 15
+        den = (n ^ 2)
+        result = result + (n / den)
+        If n Mod 2 = 0 Then
+            n = (-(n)) + 1
+        Else:
+            n = (-(n)) - 1
+        End If
+    Wend
+    
+    MsgBox (result)
+End Sub
