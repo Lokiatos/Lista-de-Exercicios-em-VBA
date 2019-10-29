@@ -1,0 +1,22 @@
+Private Sub Repeticao_22_Click()
+'Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+Dim c As Integer
+Dim f As Integer
+N = InputBox("Digite aqui o número desejado")
+c = N / 2
+
+While c > 1
+    If N Mod c = 0 Then
+        f = f + 1
+        msgbox ("Esse número é divisível por " & c)
+    End If
+    c = c - 1
+Wend
+If f = 0 Then
+    msgbox ("Esse número é primo")
+End If
+
+End Sub
