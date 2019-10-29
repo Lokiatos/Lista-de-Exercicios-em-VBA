@@ -1,0 +1,26 @@
+Private Sub Repeticao_11_Click()
+'Altere o programa anterior para mostrar no final a soma dos números.'
+'Programador: Hugo Leça Ribeiro
+
+Dim c As Integer
+Dim n1 As Integer
+Dim n2 As Integer
+Dim Aux As Integer          'auxiliar para trocar valores, caso o usuário digite o primeiro número maior que o segundo'
+Dim Soma As Integer
+
+n1 = InputBox("Digite aqui o primeiro número ")
+n2 = InputBox("Digite aqui o segundo número ")
+If n1 > n2 Then
+    Aux = n2
+    n2 = n1
+    n1 = Aux
+End If
+
+c = n1 + 1
+While c < n2
+    msgbox (c)
+    Soma = Soma + c
+    c = c + 1
+Wend
+msgbox ("A soma dos números nesse intervalo é igual a: " & Soma)
+End Sub
