@@ -1,0 +1,22 @@
+Private Sub Repeticao_08_Click()
+'Faça um programa que leia 5 números e informe a soma e a média dos números.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Double
+Dim c As Integer
+Dim Soma As Double
+Dim media As Double
+
+c = 1
+
+While c <= 5
+    N = InputBox("Digite aqui um número")
+    Soma = Soma + N
+    c = c + 1
+Wend
+media = Soma / (c - 1)     'Fiz (c-1) pois o contador passaria em 1 de 5, ficando 6'
+
+msgbox ("A soma de todos esses número é igual a: " & Soma)
+msgbox ("A média desses números é igual a: " & media)
+    
+End Sub
