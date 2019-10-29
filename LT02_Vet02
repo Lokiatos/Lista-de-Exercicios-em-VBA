@@ -1,0 +1,34 @@
+Private Sub LT02_Vet02_Click()
+''Objetivo: Criar e coletar um vetor [100] inteiro e exibir:
+'O maior e menor valor
+'A média dos valores
+'Programador: Hugo Leça Ribeiro
+
+Dim maior As Integer
+Dim menor As Integer
+Dim media As Double
+Dim i As Integer
+Dim vt(100) As Integer
+Dim cmedia As Integer
+
+maior = Empty
+menor = Empty
+
+For i = 1 To 100
+    vt(i) = InputBox("Digite aqui um número ")
+    If vt(i) > maior Then
+        maior = vt(i)
+    End If
+    If vt(i) < menor Or menor = Empty Then
+        menor = vt(i)
+    End If
+    media = media + vt(i)
+    cmedia = cmedia + 1
+Next
+
+media = media / cmedia
+MsgBox ("O maior número é o " & maior)
+MsgBox ("O menor número é o " & menor)
+MsgBox ("A média é de: " & media)
+
+End Sub
