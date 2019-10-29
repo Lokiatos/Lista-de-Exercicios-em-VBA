@@ -1,0 +1,25 @@
+Private Sub Repeticao_10_Click()
+'Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.'
+'Programador: Hugo Leça Ribeiro
+
+Dim c As Integer
+Dim n1 As Integer
+Dim n2 As Integer
+Dim Aux As Integer          'auxiliar para trocar valores, caso o usuário digite o primeiro número maior que o segundo'
+
+
+n1 = InputBox("Digite aqui o primeiro número ")
+n2 = InputBox("Digite aqui o segundo número ")
+If n1 > n2 Then
+    Aux = n2
+    n2 = n1
+    n1 = Aux
+End If
+
+c = n1 + 1
+While c < n2
+    msgbox (c)
+    c = c + 1
+Wend
+
+End Sub
