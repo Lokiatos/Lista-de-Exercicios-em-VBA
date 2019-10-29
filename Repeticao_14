@@ -1,0 +1,22 @@
+Private Sub Repeticao_14_Click()
+'Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.'
+'Programador: Hugo Leça Ribeiro
+
+Dim cpar As Integer
+Dim cimpar As Integer
+Dim N As Integer
+Dim c As Integer
+c = 1
+While c <= 10
+    N = InputBox("Digite aqui um número")
+    If N Mod 2 = 0 Then
+        cpar = cpar + 1
+    Else
+        cimpar = cimpar + 1
+    End If
+    c = c + 1
+Wend
+
+msgbox ("Foram inseridos " & cpar & " números pares " & " e " & cimpar & " números ímpares")
+
+End Sub
