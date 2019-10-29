@@ -1,0 +1,22 @@
+Private Sub Repeticao_28_Click()
+'Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.'
+'Programador: Hugo Leça Ribeiro
+
+Dim valor As Double
+Dim vtot As Double
+Dim media As Double
+Dim qtd As Integer
+Dim iqtd As Integer
+
+qtd = InputBox("Digite aqui quantos CDs possuem em sua coleção")
+iqtd = qtd
+
+While iqtd > 0
+    valor = InputBox("Digite o valor deste CD")
+    vtot = vtot + valor
+    iqtd = iqtd - 1
+Wend
+media = vtot / qtd
+
+msgbox ("O valor total da sua coleção é de: R$" & vtot & " e a média de cada CD é de: R$" & media)
+End Sub
