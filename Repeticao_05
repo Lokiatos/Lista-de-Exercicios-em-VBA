@@ -1,0 +1,46 @@
+Private Sub Repeticao_05_Click()
+'Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.'
+'Programador: Hugo Leça Ribeiro
+
+Dim A As Double
+Dim B As Double
+Dim cresceA As Double
+Dim cresceB As Double
+Dim repetir As String
+
+repetir = "S"
+
+While repetir = "S" Or repetir = "s"
+A = InputBox("Digite aqui a população do país A")
+While A <= 0
+    msgbox ("A população tem que ser pelo menos 1")
+    A = InputBox("Digite aqui a população do país A ")
+Wend
+
+B = InputBox("Digite aqui a população do país B")
+While B <= 0
+    msgbox ("A população tem que ser pelo menos 1")
+    B = InputBox("Digite aqui a população do país B ")
+Wend
+
+cresceA = InputBox("Digite aqui a taxa de crescimento do país A - em porcentagem")
+cresceB = InputBox("Digite aqui a taxa de crescimento do país B - em porcentagem")
+
+
+    While A < B
+        A = A + (A * cresceA / 100)
+        B = B + (B * cresceB / 100)
+        anos = anos + 1
+    Wend
+msgbox ("A população do país A será de: " & A)
+msgbox ("A população do país B será de: " & B)
+msgbox ("O país A ultrapassará ou igualará o país B depois de " & anos & " anos")
+
+repetir = InputBox("Digite 'S' aqui caso queira repetir o procedimento")
+If repetir <> "S" And repetir <> "s" Then
+    repetir = N
+End If
+
+Wend
+
+End Sub
