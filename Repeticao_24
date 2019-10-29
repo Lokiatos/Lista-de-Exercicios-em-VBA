@@ -1,0 +1,19 @@
+Private Sub Repeticao_24_Click()
+'Faça um programa que calcule o mostre a média aritmética de N notas.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+Dim nota As Integer
+Dim Soma As Integer
+Dim media As Double
+N = InputBox("Digite aqui quantas notas gostaria de inserir")
+i = N
+While i > 0
+    nota = InputBox("Digite aqui a nota")
+    Soma = Soma + nota
+    i = i - 1
+Wend
+media = Soma / N
+msgbox ("A média entre todas as notas foi: " & media)
+
+End Sub
