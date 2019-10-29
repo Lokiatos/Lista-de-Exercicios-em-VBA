@@ -1,0 +1,20 @@
+Private Sub LT01_EstSeq42_Click()
+'Objetivo: Calcular e mostrar a série 1 + 2/3 + 3/5 + ... + 50/99'
+'Programador: Hugo Leça Ribeiro
+
+Dim num As Integer
+Dim den As Integer
+Dim soma As Double
+
+num = 1
+den = 1
+soma = 0
+
+    While num <= 50
+        soma = soma + (num / den)
+        num = (num + 1)
+        den = (den + 2)
+    Wend
+    MsgBox (soma)
+    
+End Sub
