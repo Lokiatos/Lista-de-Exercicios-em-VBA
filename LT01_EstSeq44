@@ -1,0 +1,29 @@
+Private Sub LT01_EstSeq44_Click()
+'Objetivo: Receba o número da base e do expoente. Calcule e mostre o valor da potência.'
+'Programador: Hugo Leça Ribeiro
+
+Dim expo As Integer
+Dim expoc As Double
+Dim base As Double
+Dim result As Double
+
+base = InputBox("Digite aqui o número desejado")
+expo = InputBox("Digite aqui a potência deste número")
+result = 1
+
+
+    If expo = 0 Then
+        MsgBox ("Toda base elevada a 0 resulta em 1")
+    Else
+        If expo > 0 Then
+            While expo > 0
+                result = (result * base)
+                expo = (expo - 1)
+            Wend
+        MsgBox ("O resultado da base elevado a esta potência é de: ") & (result)
+        End If
+        If expo < 0 Then
+            MsgBox ("Esse exercício trabalha apenas com expoentes inteiros e positivos")
+        End If
+    End If
+End Sub
