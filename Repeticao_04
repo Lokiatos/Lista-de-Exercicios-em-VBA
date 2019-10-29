@@ -1,0 +1,25 @@
+Private Sub Repeticao_04_Click()
+'Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%.
+'Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.'
+'Programador: Hugo Leça Ribeiro
+
+Dim A As Double
+Dim B As Double
+Dim cresceA As Double
+Dim cresceB As Double
+
+A = 80000
+B = 200000
+cresceA = 1.03
+cresceB = 1.015
+anos = 0
+
+While A < B
+    A = A * cresceA
+    B = B * cresceB
+    anos = anos + 1
+Wend
+msgbox ("A população do país A será de: " & A)
+msgbox ("A população do país B será de: " & B)
+msgbox ("O país A ultrapassará ou igualará o país B depois de " & anos & " anos")
+End Sub
