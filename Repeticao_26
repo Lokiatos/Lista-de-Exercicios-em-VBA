@@ -1,0 +1,37 @@
+Private Sub Repeticao_26_Click()
+'Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.'
+'Programador: Hugo Leça Ribeiro
+
+Dim A As Integer
+Dim B As Integer
+Dim c As Integer
+Dim votos As Integer
+Dim cand As String
+Dim eleitores As Integer
+
+eleitores = InputBox("Digite o total de eleitores")
+erro:
+While eleitores > 0
+    cand = InputBox("Você votará em A, B ou C? Responda com a letra correspondente")
+    If cand = "A" Or cand = "a" Then
+        A = A + 1
+    Else
+        If cand = "B" Or cand = "b" Then
+            B = B + 1
+        Else
+            If cand = "C" Or cand = "c" Then
+                c = c + 1
+            Else
+                msgbox ("Nome inválido, tente novamente ")
+                GoTo erro
+            End If
+        End If
+    End If
+    eleitores = eleitores - 1
+Wend
+msgbox ("O candidato A recebeu " & A & " votos")
+msgbox ("O candidato B recebeu " & B & " votos")
+msgbox ("O candidato C recebeu " & c & " votos")
+    
+
+End Sub
