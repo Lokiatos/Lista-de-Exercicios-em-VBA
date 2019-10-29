@@ -1,0 +1,18 @@
+Private Sub Repeticao_13_Click()
+'Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem.'
+'Premissa: Apenas expoentes inteiros e positivos'
+'Programador: Hugo Leça Ribeiro
+
+Dim base As Integer
+Dim expo As Integer
+Dim result As Double
+
+base = InputBox("Digite aqui a base")
+expo = InputBox("Digite aqui o expoente")
+result = base
+While expo > 1
+    result = result * base
+    expo = expo - 1
+Wend
+msgbox (result)
+End Sub
