@@ -1,0 +1,19 @@
+Private Sub Repeticao_17_Click()
+'Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+Dim Fat As Integer
+Dim ifat As Integer
+
+Fat = 1
+N = InputBox("Digite aqui o número desejado")
+ifat = N
+While ifat >= 1
+    Fat = Fat * ifat
+    ifat = ifat - 1
+Wend
+
+msgbox ("O fatorial de " & N & " é: " & Fat)
+    
+End Sub
