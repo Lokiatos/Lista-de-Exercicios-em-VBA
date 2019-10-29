@@ -1,0 +1,24 @@
+Private Sub Repeticao_20_Click()
+'Altere o programa de cálculo do fatorial, permitindo ao usuário calcular o fatorial várias vezes e limitando o fatorial a números inteiros positivos e menores que 16.'
+'Programador: Hugo Leça Ribeiro
+
+Dim Fat As Double
+Dim ifat As Integer
+Dim N As Integer
+
+lac: N = 0
+    While N <= 0 Or N > 16
+        N = InputBox("Digite aqui o número desejado")
+        If N <= 0 Or N > 16 Then
+            msgbox ("O número deve ser positivo, inteiro e menor do que 16")
+        End If
+    Wend
+    Fat = 1
+    ifat = N
+    While ifat > 1
+        Fat = Fat * ifat
+        ifat = ifat - 1
+    Wend
+    msgbox ("O fatorial de " & N & " será de: " & Fat)
+    GoTo lac
+End Sub
