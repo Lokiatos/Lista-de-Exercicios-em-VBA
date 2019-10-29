@@ -1,0 +1,22 @@
+Private Sub Repeticao_35_Click()
+'Encontrar números primos é uma tarefa difícil. Faça um programa que gera uma lista dos números primos existentes entre 1 e um número inteiro informado pelo usuário.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer        'número a ser digitado'
+Dim c As Integer        'contador da raiz do número até o 1'
+Dim i As Integer        'contador de número em número'
+
+N = InputBox("Digite aqui o número desejado")
+i = 2
+While i < N
+    If i > 2 And i Mod 2 = 0 Then GoTo nao
+    c = Sqr(i)
+    While c > 1
+        If i Mod c = 0 Then GoTo nao
+    c = c - 1
+    Wend
+    msgbox (i & " é primo")
+nao:
+    i = i + 1
+Wend
+End Sub
