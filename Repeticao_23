@@ -1,0 +1,31 @@
+Private Sub Repeticao_23_Click()
+'Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário.
+'O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos.
+'Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer    'número a ser digitado'
+Dim c As Integer    'contador da raiz até 2'
+Dim i As Integer    'contador de 1 até o número'
+Dim div As Integer  'contador de divisões'
+Dim n1 As Integer
+
+N = InputBox("Digite aqui o número desejado")
+n1 = N
+
+While n1 > 1
+    c = Sqr(n1)
+    While c > 1
+        If n1 Mod c = 0 Then
+            div = div + 1
+            GoTo Pausa
+        End If
+        div = div + 1
+        c = c - 1
+    Wend
+    msgbox (n1)
+Pausa:
+    n1 = n1 - 1
+Wend
+msgbox ("Foram utilizadas " & div & " divisões")
+End Sub
