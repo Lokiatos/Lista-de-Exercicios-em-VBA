@@ -1,0 +1,25 @@
+Private Sub Repeticao_34_Click()
+'Os números primos possuem várias aplicações dentro da Computação, por exemplo na Criptografia. Um número primo é aquele que é divisível apenas por um e por ele mesmo.
+'Faça um programa que peça um número inteiro e determine se ele é ou não um número primo.
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Double
+Dim c As Integer
+
+N = InputBox("Digite o número aqui")
+c = Sqr(N)
+If N > 2 And N Mod 2 = 0 Or N <= 1 Then GoTo nao
+    
+While c > 1
+    If N Mod c = 0 Then GoTo nao
+    c = c - 1
+Wend
+
+msgbox (N & " é primo")
+GoTo fim
+    
+nao:
+msgbox (N & " não é primo")
+
+fim:
+End Sub
