@@ -1,0 +1,18 @@
+Private Sub Repeticao_16_Click()
+'A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa que gere a série até que o valor seja maior que 500.'
+'Programador: Hugo Leça Ribeiro
+
+Dim natual As Integer 'número atual'
+Dim nant2 As Integer  'número antes do anterior'
+Dim nant As Integer   'número anterior'
+
+nant2 = 0
+nant = 1
+msgbox (nant2)
+While nant < 500
+    natual = nant2 + nant
+    msgbox (nant)
+    nant2 = nant
+    nant = natual
+Wend
+End Sub
