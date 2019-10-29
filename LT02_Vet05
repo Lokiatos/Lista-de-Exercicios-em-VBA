@@ -1,0 +1,26 @@
+Private Sub LT02_VET05_Click()
+'Objetivo: Criar e coletar em um vetor [20] inteiro. Calcular e exibir segundo:
+'Soma (por 10 vezes) (A[1] 0 A[21-1]'
+'Programador: Hugo Leça Ribeiro
+
+Dim vet(20) As Integer
+Dim i As Integer
+Dim i20 As Integer
+Dim soma As Integer
+
+
+i20 = 20
+
+For i = 1 To 20
+    vet(i) = InputBox("Digite aqui um número")
+Next
+
+i20 = 20
+For i = 1 To 10
+    soma = soma + vet(i) - vet(i20)
+    i20 = i20 - 1
+Next
+
+MsgBox ("A soma dos números é de: " & soma)
+
+End Sub
