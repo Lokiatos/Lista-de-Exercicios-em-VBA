@@ -1,0 +1,44 @@
+Private Sub Repeticao_15_Click()
+'A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n-ésimo termo.'
+'Programador: Hugo Leça Ribeiro
+
+Dim natual As Integer 'número atual'
+Dim nant2 As Integer  'número antes do anterior'
+Dim nant As Integer   'número anterior'
+Dim tfinal As Integer 'termo final'
+Dim tatual As Integer  'termo atual'
+
+nant2 = 0
+nant = 1
+
+tfinal = InputBox("Digite aqui até qual termo gostaria de visualizar a série de Fibonacci")
+
+If tfinal <= 0 Then
+    msgbox ("O menor termo deve ser 1")
+Else
+    If tfinal = 1 Then
+        msgbox (nant2)
+        tatual = 1
+    Else
+        If tfinal = 2 Then
+            msgbox (nant2)
+            msgbox (nant)
+            tatual = 2
+        Else
+            If tfinal > 2 Then
+                msgbox (nant2)
+                msgbox (nant)
+                tatual = 3
+                While tatual <= tfinal
+                    natual = nant2 + nant
+                    msgbox (natual)
+                    nant2 = nant
+                    nant = natual
+                    tatual = tatual + 1
+                Wend
+            End If
+        End If
+    End If
+End If
+
+End Sub
