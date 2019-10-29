@@ -1,0 +1,28 @@
+Private Sub Repeticao_38_Click()
+'Um funcionário de uma empresa recebe aumento salarial anualmente: Sabe-se que:
+'Esse funcionário foi contratado em 1995, com salário inicial de R$ 1.000,00;
+'Em 1996 recebeu aumento de 1,5% sobre seu salário inicial;
+'A partir de 1997 (inclusive), os aumentos salariais sempre correspondem ao dobro do percentual do ano anterior. Faça um programa que determine o salário atual desse funcionário.
+'Após concluir isto, altere o programa permitindo que o usuário digite o salário inicial do funcionário.'
+'Programador: Hugo Leça Ribeiro
+
+Dim salInicial As Double
+Dim ano As Integer
+Dim perc As Double
+Dim percant As Double       'percentual do ano anterior'
+Dim salAtual As Double
+
+salInicial = InputBox("Digite aqui seu salário inicial")
+ano = 1996
+percant = 1.5 / 100
+salAtual = salInicial * (1 + percant)
+
+While ano <= 2019
+    perc = percant * 2
+    salAtual = salAtual * (1 + perc)
+    percant = perc
+    ano = ano + 1
+Wend
+msgbox ("Seu salário atual em " & ano - 1 & " é de:  R$" & salAtual)
+
+End Sub
