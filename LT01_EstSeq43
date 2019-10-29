@@ -1,0 +1,19 @@
+Private Sub LT01_EstSeq43_Click()
+'Objetivo: Calcule e mostre quantos anos serão necessários para que Ana seja maior que Maria sabendo que Ana tem 1,10 m e cresce 3 cm ao ano e Maria tem 1,5 m e cresce 2 cm ao ano.'
+'Programador: Hugo Leça Ribeiro
+
+Dim Maria As Double
+Dim ana As Double
+Dim anos As Integer
+
+Maria = 150
+ana = 110
+
+    While ana <= Maria
+        ana = ana + 3
+        Maria = Maria + 2
+        anos = anos + 1
+    Wend
+
+    MsgBox ("Após ") & anos & (" anos,") & (" Maria terá ") & Maria / 100 & ("m") & (" e Ana terá ") & ana / 100 & ("m")
+End Sub
