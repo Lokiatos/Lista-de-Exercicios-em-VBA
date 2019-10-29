@@ -1,0 +1,13 @@
+Private Sub Repeticao_01_Click()
+'Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.'
+'Programador: Hugo Leça Ribeiro
+
+Dim nota As Double
+
+nota = InputBox("Digite aqui uma nota de zero a dez ")
+
+While nota < 0 Or nota > 10
+    msgbox ("Valor inválido ")
+    nota = InputBox("Digite um valor válido, ou seja, entre zero e dez ")
+Wend
+End Sub
