@@ -17,8 +17,6 @@ Lote 1.1
 13.	Receba a quantidade de alimento em quilos. Calcule e mostre quantos dias durará esse alimento sabendo que a pessoa consome 50g ao dia.
 14.	Receba 2ângulos de um triângulo. Calcule e mostre o valor do 3º ângulo.
 15.	Receba os valores de 2 catetos de um triângulo retângulo. Calcule e mostre a hipotenusa.
-
-
 16.	Receba a quantidade de horas trabalhadas, o valor por hora, o percentual de desconto e o número de descendentes. Calcule o salário que serão as horas trabalhadas x o valor por hora. Calcule o salário líquido (= Salário Bruto – desconto). A cada dependente será acrescido R$ 100 no Salário Líquido. Exiba o salário a receber.
 17.	Calcule a quantidade de litros gastos em uma viagem, sabendo que o automóvel faz 12 km/l. Receber o tempo de percurso e a velocidade média.
 18.	Receba 2 valores inteiros. Calcule e mostre o resultado da diferença do maior pelo menos valor.
@@ -60,6 +58,25 @@ Qdte:	1	2	4	8	...	N
 44.	Receba o número da base e do expoente. Calcule e mostre o valor da potência.
 45.	Calcule e mostre a série 1 – 2/4 + 3/9 – 4/16 + 5/25 + ... + 15/225
 
+Vetores e Matrizes
+1.	Criar e coletar um vetor [50] inteiro. Calcular e exibir:
+a.	A média dos valores entre 10 e 200;
+b.	A soma dos números ímpares.
+2.	Criar e coletar um vetor [100] inteiro e exibir:
+a.	O maior e o menor valor;
+b.	A média dos valores.
+3.	Criar e coletar valores inteiros nos vetores VT1[3] e VT2[3]. Concatenar esses valores em um 3º vetor (VT3[6]) e mostrar os seus dados. P. ex:
+VT1|	1|	2|	3|	|VT2|	4|	5|	6|	|VT3|	1|	2|	3|	4|	5|	6
+4.	Criar e coletar em um vetor [30] real e calcular e exibir:
+a.	A média do grupo;
+b.	A quantidade de notas acima do grupo;
+c.	As posições dos valores abaixo da média do grupo.
+5.	Criar e coletar em um vetor [20] inteiro. Calcule e exiba, segundo:
+10
+∑ (A[1] – A[21–1])
+i = 1
+6.	Criar e coletar em um vetor [20] com números aleatórios. Classificar este vetor em ordem crescente e mostre os dados.
+7.	A partir do exercício 6 (vetor classificado) solicitar um valor qualquer e verificar a sua existência no vetor (utilizar pesquisa binária).
 
 
 
