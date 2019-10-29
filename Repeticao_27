@@ -1,0 +1,27 @@
+Private Sub Repeticao_27_Click()
+'Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas e a quantidade de alunos para cada turma. As turmas não podem ter mais de 40 alunos.
+'Programador: Hugo Leça Ribeiro
+
+Dim turmas As Integer
+Dim alunos As Integer
+Dim talunos As Integer
+Dim media As Double
+Dim iturmas As Integer
+
+
+turmas = InputBox("Digite quantas turmas existem")
+iturmas = turmas
+erro:
+While iturmas > 0
+    alunos = InputBox("Digite quantos alunos esta sala possui")
+    If alunos > 40 Then
+        msgbox ("Uma turma não pode ter mais do que 40 alunos")
+        GoTo erro
+    End If
+    talunos = talunos + alunos
+    iturmas = iturmas - 1
+Wend
+media = talunos / turmas
+msgbox ("A média de alunos por turma é de: " & media)
+    
+End Sub
