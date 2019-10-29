@@ -1,0 +1,71 @@
+Private Sub LT02_vet06_2_Click()
+'Objetivo: Criar e coletar em um vetor [20] com números aleatórios. Classificar este vetor em ordem crescente e mostrar os dados
+
+'A lógica utilizada foi a seguinte:
+'Vamos supor que o vetor tenha 5 números, do índice 1 até o índice 5, tais como: 5 3 7 2 1'
+'Eu preciso comparar se o valor do índice 1, ou seja, se o 5 é maior do que o valor do índice 2, ou seja, o número 3'
+'Neste caso o 5 é maior do que 3, então preciso inverter de posição esses números. Assim, o vetor ficaria: 3 5 7 2 1'
+'Agora, preciso fazer o mesmo procedimento iniciando do índice 1 ainda - que agora equivale ao número 3'
+'3 é maior do que 5? Não. Então preciso aumentar em 1 o número do índice que eu verificarei, ficando assim: 3 (índice 1) é maior do que o número 7 (índice 3)? Não.
+'Aumentarei em mais um o índice de verificação. Ficando assim: 3 (índice 1) é maior do que o número 2 (índice 4)? SIM!'
+'Como 3 é maior do que o 2, então os trocarei de lugar. Ficando assim osso vetor: 2 5 7 3 1'
+'Farei a mesma coisa com o 2 agora, o comparando com todos os números e trocando de posição caso seja maior do que algum. Nesse caso ele será maior do que o 1 (índice 5), então os trocarei de posição'
+'Ficando assim: 1 5 7 3 2'
+'O 1 (índice 1) será comparado com cada outro número, porém, ele não será maior do que nenhum número. Assim, é a hora de esquecermos o índice 1 e passarmos a analisar o índice 2 (que contém o número 5)'
+'A ordem do nosso vetor vai se alterando passo a passo, deste modo:
+'5 3 7 2 1
+'3 5 7 2 1
+'2 5 7 3 1
+'1 5 7 3 2
+'1 3 7 5 2
+'1 2 7 5 3
+'1 2 5 7 3
+'1 2 3 5 7
+
+'Quando chegarmos até o penúltimo termo, devemos parar o laço, concatenar os valores em string e mostrar'
+
+'Programador: Hugo Leça Ribeiro
+
+Dim vet(20) As Double 'Vetor principal'
+Dim aux As Double 'Auxiliar para trocar valores de índices'
+Dim i As Double 'Contador'
+Dim j As Double
+Dim msg As String 'mensagem que aparecerá os números em ordem crescente'
+i = 1
+While i <= 20
+    vet(i) = InputBox("Digite aqui um número") ' receber 20 números no vetor'
+    i = i + 1
+Wend
+
+i = 1 'Voltar o contador para 1'
+LACO:
+While i <= 19 'Laço indo do primeiro índice até o penúltimo índice, já que o último índice será o maior, não haverá mais como comparar o último com algum outro'
+    j = (i + 1) 'O contador j irá sempre iniciar como sendo o índice do contador i + 1'
+B:
+    While j <= 20 'Laço indo do j (i + 1) até o último índice (20)'
+ABA:
+        If vet(i) > vet(j) Then 'Caso o número do índice i seja maior do que o número do índice j, então devemos trocá-los de posição'
+            aux = vet(i)
+            vet(i) = vet(j)
+            vet(j) = aux 'Auxiliar ajudando na troca de valores dos índices i e j'
+            j = i + 1 'Precisamos igualar novamente o j para ser (i + 1)'
+            GoTo ABA 'Vai voltar para verificar novamente o índice i por todos os índices j'
+        Else
+            If j = 20 Then 'Isso quer dizer que já conferimos até o último índice do vetor, então precisamos aumentar em 1 o índice i'
+                i = i + 1 'Aumentando em 1 o índice i'
+                GoTo LACO
+            Else 'Caso o número da posição i não seja maior que o número da posição j E também que j não seja igual a 20'
+                j = j + 1 'Aumentamos um em j e vamos repetir esse laço, para que o índice i cheque agora se é maior do que cada outro índice do vetor acima dele'
+                GoTo B
+            End If
+        End If
+    Wend
+Wend
+
+For i = 1 To 20
+    msg = msg & " " & vet(i)
+Next
+
+MsgBox ("A ordem crescente dos números nesse vetor será: " & msg)
+
+End Sub
