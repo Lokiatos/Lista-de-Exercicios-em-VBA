@@ -1,0 +1,15 @@
+Private Sub Repeticao_09_Click()
+'Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.'
+'Programador: Hugo Leça Ribeiro
+
+Dim N As Integer
+
+N = 1
+While N <= 50
+    If N Mod 2 <> 0 Then
+        msgbox (N)
+    End If
+    N = N + 1
+Wend
+ 
+End Sub
